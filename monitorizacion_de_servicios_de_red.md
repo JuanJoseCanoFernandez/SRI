@@ -1,6 +1,17 @@
 ## MONITORIZACIÓN DE SERVICIOS DE RED  
 
 
+### ACTIVAR, DESACTIVAR, INICIAR, PARAR, RECARGAR UN SERVICIO DE RED CON SYSTEMCTL
+Activar: systemctl start systemd-networkd.service  
+Desactivar o parar: systemctl stop systemd-networkd.service  
+Recargar: systemctl restart systemd-networkd.service
+
+### NETSTAT PARA COMPROBAR LOS PUERTOS
+netstat, término derivado de “network” (red) y “statistics”, es un programa dirigido con órdenes ejecutadas en la línea de comandos que entrega estadísticas   
+básicas sobre la totalidad de las actividades de red.  
+
+Para ver los puertos usamos netstat -s -p "puerto";
+
 ### CAMBIO PARA QUE ESCUCHE POR UN PUERTO DISTINTO  
 Por defecto los servidores SSH utilizan el puerto 22 para las conexiones.  
 Es recomendable cambiar este número de puerto, para evitar que bots o cibercriminales puedan intentar iniciar sesión,  

@@ -1,10 +1,21 @@
-## MONITORIZACIÓN DE SERVICIOS DE RED  
+# MONITORIZACIÓN DE SERVICIOS DE RED  
 
 
-### ACTIVAR, DESACTIVAR, INICIAR, PARAR, RECARGAR UN SERVICIO DE RED CON SYSTEMCTL
+### ACTIVAR, DESACTIVAR, INICIAR, PARAR, RECARGAR UN SERVICIO DE RED CON SYSTEMCTL  
+Systemctl nos permitirá controlar el sistema de inicialización systemd. Con el podemos:  
+#### Parámetros:  
 Activar: systemctl start systemd-networkd.service  
 Desactivar o parar: systemctl stop systemd-networkd.service  
-Recargar: systemctl restart systemd-networkd.service
+Recargar: systemctl restart systemd-networkd.service  
+Listar los servicios: systemctl --type=service  
+
+### JOURNALCTL  
+Journalctl: es una herramienta util para acceder a los registros del sistema. Más adelante  
+enseñaremos comandos mas complejos con journalctl, ahora mismo vamos a ver solo unos básicos:
+#### Parámetros:  
+Acceder: journalctl  
+Redirigir la salida: journalctl > mensaje.log  
+Seguir los mensajes en tiempo real: journalctl -f
 
 ### NETSTAT PARA COMPROBAR LOS PUERTOS
 netstat, término derivado de “network” (red) y “statistics”, es un programa dirigido con órdenes ejecutadas en la línea de comandos que entrega estadísticas   

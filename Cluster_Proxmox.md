@@ -12,7 +12,7 @@ NFS.
 
 Y finalmente, migraremos esa máquina virtual de un nodo a otro para poder conseguir el Cluster.  
 
-### PRERREQUISITOS
+### REQUISITOS
 
 Necesitamos 3 máquinas virtuales:  
 1. Una máquina Debian.  

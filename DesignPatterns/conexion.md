@@ -1,7 +1,8 @@
 ## Conexión a una base de datos usando el patrón de diseño Singleton y PDO.  
 
 class ConnectDb {  
-> creamos una instancia 
+> creamos una instancia.  
+ 
   private static $instance = null;    
   private $conn;  
   

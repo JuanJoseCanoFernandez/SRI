@@ -1,15 +1,16 @@
-<?php  
+## Conexión a una base de datos usando el patrón de diseño Singleton y PDO.  
+
 class ConnectDb {  
-  // Hold the class instance.  
-  private static $instance = null;  
+> creamos una instancia 
+  private static $instance = null;    
   private $conn;  
-    
+  
   private $host = 'localhost';  
   private $user = 'administrador';  
   private $pass = 'administrador';  
   private $name = 'tienda';  
      
-  // The db connection is established in the private constructor.  
+ > la base de datos es establecida con un constructor privado 
   private function __construct()  
   {  
     $this->conn = new PDO("mysql:host={$this->host};  
@@ -32,6 +33,8 @@ class ConnectDb {
     return $this->conn;  
   }  
 }  
+
+> creamos varias conexiones para comprobar que este patrón de diseño solo realiza una conexión.
 $instance = ConnectDb::getInstance();  
 $conn = $instance->getConnection();  
 var_dump($conn);  
@@ -43,5 +46,3 @@ var_dump($conn);
 $instance = ConnectDb::getInstance();  
 $conn = $instance->getConnection();  
 var_dump($conn);  
-  
-?>  

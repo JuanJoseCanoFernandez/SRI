@@ -10,7 +10,8 @@ class ConnectDb {
   private $pass = 'administrador';  
   private $name = 'tienda';  
      
- > la base de datos es establecida con un constructor privado 
+ > la base de datos es establecida con un constructor privado.  
+  
   private function __construct()  
   {  
     $this->conn = new PDO("mysql:host={$this->host};  
@@ -34,7 +35,8 @@ class ConnectDb {
   }  
 }  
 
-> creamos varias conexiones para comprobar que este patrón de diseño solo realiza una conexión.
+> creamos varias conexiones para comprobar que este patrón de diseño solo realiza una conexión.  
+
 $instance = ConnectDb::getInstance();  
 $conn = $instance->getConnection();  
 var_dump($conn);  

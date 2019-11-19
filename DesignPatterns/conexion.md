@@ -11,26 +11,21 @@ class ConnectDb {
   private $name = 'tienda';  
      
  > la base de datos es establecida con un constructor privado.  
-  
-  private function __construct()  
-  {  
+
+  private function __construct() {  
     $this->conn = new PDO("mysql:host={$this->host};  
     dbname={$this->name}", $this->user,$this->pass,  
     array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));  
   }  
     
-  public static function getInstance()  
-  {  
-    if(!self::$instance)  
-    {  
+  public static function getInstance() {  
+    if(!self::$instance) {  
       self::$instance = new ConnectDb();  
-    }  
-     
+    } 
     return self::$instance;  
   }  
     
-  public function getConnection()  
-  {  
+  public function getConnection() {  
     return $this->conn;  
   }  
 }  

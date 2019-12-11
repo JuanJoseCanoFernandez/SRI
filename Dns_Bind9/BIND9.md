@@ -152,8 +152,8 @@ comprobar las opciones directas.
 
 1. Comenzamos configurando las ips estaticas tanto en ipv4 y en ipv6.
 
-2. Entraremos en la opcion de crear roles y características y crearemos un servidor dns. Posteriormente  
-Posteriormente entraremos en herramientas y pulsaremos la opcion de DNS. Se nos abrira una ventana donde nos aparece   
+2. Entraremos en la opcion de crear roles y características y crearemos un servidor dns. Posteriormente   
+entraremos en herramientas y pulsaremos la opcion de DNS. Se nos abrira una ventana donde nos aparece   
 en forma de arbol las zonas directas e inversas. En cada una crearemos una nueva zona y seguiremos los pasos que nos   
 indica. 
 

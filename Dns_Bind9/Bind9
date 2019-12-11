@@ -1,7 +1,0 @@
-# MONITORIZACIÓN DE SERVICIOS DE RED  
-
-
-### ACTIVAR, DESACTIVAR, INICIAR, PARAR, RECARGAR UN SERVICIO DE RED CON SYSTEMCTL  
-Systemctl nos permitirá controlar el sistema de inicialización systemd. Con el podemos:  
-#### Parámetros:  
-Activar: systemctl start systemd-networkd.service  

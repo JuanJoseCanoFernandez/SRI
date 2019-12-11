@@ -16,7 +16,7 @@ las inversas de nuestro dns(es recomendable acceder al directorio como root). De
 ficheros, gran parte de ellos son plantillas hechas para que a partir de ahí creemos nuestros ficheros propios.
 
 Una vez estamos dentro, entraremos en el fichero named.conf.local, el cual separará nuestras zonas del DNS.  
-En mi caso las zonas quedaron tal que así, ya que yo tenia una ipv4 10.10.1.0 y una ipv6 2001:Db8:abcd::/64 :  
+En mi caso las zonas quedaron tal que así, ya que yo tenia una ipv4 "10.10.1.0" y una ipv6 "2001:Db8:abcd::/64" :  
 
 ~~~
 /zona directa en ipv4 e ipv6/
@@ -138,5 +138,25 @@ options {
 
 ~~~
 
+Editaremos el /etc/resolv.com donde añadiremos las siguientes lineas:
 
+- search /dominio/
+- domain /dominio/
+- nameserver /ip del servidor/
+
+Por último editaremos el /etc/network/interfaces para tener una ip estatica, algo esencial en todo servidor.  
+Y haremos un "nslookup" seguido de una ip si queremos comprobar las zonas inversas o un nombre dns si queremos  
+comprobar las opciones directas.
+
+## Servidor Secundario -> Windows Server
+
+1. Comenzamos configurando las ips estaticas tanto en ipv4 y en ipv6.
+
+2. Entraremos en la opcion de crear roles y características y crearemos un servidor dns. Posteriormente  
+Posteriormente entraremos en herramientas y pulsaremos la opcion de DNS. Se nos abrira una ventana donde nos aparece   
+en forma de arbol las zonas directas e inversas. En cada una crearemos una nueva zona y seguiremos los pasos que nos   
+indica. 
+
+3. Por último, como resultado el servidor secundario obtendrá la configuración del servidor primario, el cual, en este   
+caso es Linux.
 
